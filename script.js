@@ -73,10 +73,14 @@ context.fill();
 context.stroke();
 
 
-    var image = new Image();
-    image.src = "/assets/images/Alien-Cartoon.jpg";
-    
-    image.onload = function(){
+var image = new Image();
+image.src = '/assets/images/Alien-Cartoon.jpg';
+image.onload = function(){
 
+    var x = 20;
 
-};
+    for(var i = 1; i<=5; i++){
+        context.drawImage(image, x, 20, 64, 32);
+        x += 70;
+    }
+}
