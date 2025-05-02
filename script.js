@@ -74,13 +74,23 @@ context.stroke();
 
 
 var image = new Image();
-image.src = '/assets/images/Alien-Cartoon.jpg';
+image.src = '/assets/images/Alien-PNG.png';
 image.onload = function(){
 
     var x = 20;
 
     for(var i = 1; i<=5; i++){
-        context.drawImage(image, x, 20, 64, 32);
+        context.drawImage(image, x, 20, 128, 64);
         x += 70;
     }
 }
+var image = new Image();
+image.src = '/assets/images/Explosao.png';
+image.onload = function() {
+    context.drawImage(
+        image,
+    80, 10, 60, 65, // Área do Recorte
+    20, 20, 60, 65 // Desenho do canvas
+    );
+}
+    
